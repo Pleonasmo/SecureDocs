@@ -1,139 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Área do Cliente</title>
-<link rel="stylesheet" href="../CSS/dashboard.css" />
-<link rel="icon" href="../Assets/icone.png" />
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do Cliente</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <link rel="icon" href="../Assets/icone.png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-<header>
-<h1>Monitoramento de Umidade e Temperatura</h1>
-</header>
+    <header>
+        <h1>Monitoramento de Umidade e Temperatura</h1>
+    </header>
 
-<div class="sidebar">
-<div class="usuario">
-<p>Bem-vindo, <strong id="nomeUsuario">Admin1234</strong></p>
-</div>
-<a href="../index.html">Início</a>
-<a href="../PAGINAS/cadastroSala.html">Cadastro de Sala</a>
-<a href="/index.html">Sair</a>
-</div>
+    <div class="sidebar">
+        <div class="usuario">
+            <p>Bem-vindo, <strong id="nomeUsuario">Admin1234</strong></p>
+        </div>
+        <a href="../index.html">Início</a>
+        <a href="../PAGINAS/cadastroSala.html">Cadastro de Sala</a>
+        <a href="/index.html">Sair</a>
+    </div>
 
-<div class="main">
-<!-- Cards -->
-<section class="cards">
-<div class="card">
-<h3>Sala Atual</h3>
-<p id="quadranteAtual">Sala A</p>
-<small>Nome da sala selecionada</small>
-</div>
-<div class="card">
-<h3>Umidade</h3>
-<p style="color: #facc15;">40%</p>
-<small>Umidade atual</small>
-</div>
-<div class="card">
-<h3>Temperatura</h3>
-<p style="color: red;">22°C</p>
-<small>Temperatura atual</small>
-</div>
-<div class="card">
-<h3>Alertas</h3>
-<p style="color: red;">2</p>
-<small>Quantidade nesta sala</small>
-</div>
-</section>
+    <div class="main">
+        <!-- Cards -->
+        <section class="cards">
+            <div class="card">
+                <h3>Sala Atual</h3>
+                <p id="quadranteAtual">Sala A</p>
+                <small>Nome da sala selecionada</small>
+            </div>
+            <div class="card">
+                <h3>Umidade</h3>
+                <p style="color: #facc15;">40%</p>
+                <small>Umidade atual</small>
+            </div>
+            <div class="card">
+                <h3>Temperatura</h3>
+                <p style="color: red;">22°C</p>
+                <small>Temperatura atual</small>
+            </div>
+            <div class="card">
+                <h3>Alertas</h3>
+                <p style="color: red;">2</p>
+                <small>Quantidade nesta sala</small>
+            </div>
+        </section>
 
-<!-- Faixa Umidade -->
-<div class="faixa-umidade">
-<div class="faixa seco">Seco (&lt; 20%)</div>
-<div class="faixa ideal">Ideal (20%-60%)</div>
-<div class="faixa umido">Úmido (&gt; 60%)</div>
-<div id="indicador-umidade"></div>
-</div>
+        <!-- Faixa Umidade -->
+        <div class="faixa-umidade">
+            <div class="faixa seco">Seco (&lt; 20%)</div>
+            <div class="faixa ideal">Ideal (20%-60%)</div>
+            <div class="faixa umido">Úmido (&gt; 60%)</div>
+            <div id="indicador-umidade"></div>
+        </div>
 
-<!-- Gráficos -->
-<div class="container-graficos-linha">
-<div class="grafico-item">
-<h3>Histórico de Temperatura</h3>
-<canvas id="graficoLinha"></canvas>
-</div>
-<div class="grafico-item">
-<h3>Umidade por Sala</h3>
-<canvas id="graficoBarras"></canvas>
-</div>
-</div>
-</div>
+        <!-- Gráficos -->
+        <div class="container-graficos-linha">
+            <div class="grafico-item">
+                <h3>Histórico de Temperatura</h3>
+                <canvas id="graficoLinha"></canvas>
+            </div>
+            <div class="grafico-item">
+                <h3>Umidade por Sala</h3>
+                <canvas id="graficoBarras"></canvas>
+            </div>
+        </div>
+    </div>
 
-<script>
-// Posiciona o indicador de umidade
-const indicador = document.getElementById("indicador-umidade");
-const umidadeAtual = 40;
-window.onload = () => {
-const faixa = document.querySelector(".faixa-umidade");
-const largura = faixa.offsetWidth;
-const posicao = (umidadeAtual / 100) * largura;
-indicador.style.left = `${posicao}px`;
-};
+    <script>
+        // Posiciona o indicador de umidade
+        const indicador = document.getElementById("indicador-umidade");
+        const umidadeAtual = 40;
+        window.onload = () => {
+            const faixa = document.querySelector(".faixa-umidade");
+            const largura = faixa.offsetWidth;
+            const posicao = (umidadeAtual / 100) * largura;
+            indicador.style.left = `${posicao}px`;
+        };
 
-// Gráfico de Linha - Temperatura
-const ctxLinha = document.getElementById("graficoLinha").getContext("2d");
-new Chart(ctxLinha, {
-type: "line",
-data: {
-labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
-datasets: [{
-label: "Temperatura (°C)",
-data: [22, 21, 20, 23, 24, 22, 21],
-borderColor: "red",
-backgroundColor: "rgba(255, 0, 0, 0.2)",
-fill: true,
-tension: 0.4
-}]
-},
-options: {
-responsive: true,
-scales: {
-y: {
-beginAtZero: false,
-title: {
-display: true,
-text: "Temperatura (°C)"
-}
-}
-}
-}
-});
+        // Gráfico de Linha - Temperatura
+        const ctxLinha = document.getElementById("graficoLinha").getContext("2d");
+        new Chart(ctxLinha, {
+            type: "line",
+            data: {
+                labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
+                datasets: [{
+                    label: "Temperatura (°C)",
+                    data: [22, 21, 20, 23, 24, 22, 21],
+                    borderColor: "red",
+                    backgroundColor: "rgba(255, 0, 0, 0.2)",
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: "Temperatura (°C)"
+                        }
+                    }
+                }
+            }
+        });
 
-// Gráfico de Barras - Umidade
-const ctxBar = document.getElementById("graficoBarras").getContext("2d");
-new Chart(ctxBar, {
-type: "bar",
-data: {
-labels: ["Sala A", "Sala B", "Sala C"],
-datasets: [{
-label: "Umidade (%)",
-data: [40, 65, 18],
-backgroundColor: ["#4F7942", "#2563eb", "#dc2626"]
-}]
-},
-options: {
-responsive: true,
-scales: {
-y: {
-beginAtZero: true,
-max: 100,
-title: {
-display: true,
-text: "Umidade (%)"
-}
-}
-}
-}
-});
-</script>
+        // Gráfico de Barras - Umidade
+        const ctxBar = document.getElementById("graficoBarras").getContext("2d");
+        new Chart(ctxBar, {
+            type: "bar",
+            data: {
+                labels: ["Sala A", "Sala B", "Sala C"],
+                datasets: [{
+                    label: "Umidade (%)",
+                    data: [40, 65, 18],
+                    backgroundColor: ["#4F7942", "#2563eb", "#dc2626"]
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: "Umidade (%)"
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>

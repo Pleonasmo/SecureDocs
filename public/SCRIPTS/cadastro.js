@@ -94,3 +94,59 @@ function criar_minha_conta() {
     }
 
 }
+
+function cadastrarSala () 
+{ 
+  var nomeSala = sala.value;
+  var tamanho = tamanho.value;
+  
+  if(nomeSala == "" || tamanho == ""){
+    alert("Você precisa preencher todos os campos!");
+  }  else {
+
+      fetch("/salas/cadastrarSala", {
+  
+      method: "POST",
+  
+      headers: {
+  
+        "Content-Type": "application/json",
+  
+      },
+  
+      body: JSON.stringify({
+  
+        nomeServer: nomeSala,
+  
+        tamanhoServer: tamanho
+  
+      }),
+  
+    })
+  
+    .then(function (resposta) {
+  
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+
+        alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+        window.location = "./dashboard.html";
+
+      } else {
+
+        throw "Houve um erro ao tentar realizar o cadastro!";
+
+      }
+
+    })
+
+    .catch(function (resposta) {
+
+      console.log(`#ERRO: ${resposta}`);
+
+    });
+
+    }
+}

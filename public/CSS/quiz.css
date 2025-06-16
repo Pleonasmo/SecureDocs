@@ -1,0 +1,280 @@
+/* PÁGINA COM A ESTILIZAÇÃO DO QUIZ.HTML */
+
+/* REMOVE MARGENS ACIMA DO HEADER ----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ESTILO GERAL DA PÁGINA ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+body {
+    background-image: url('../IMAGENS/estante_de_livros.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+
+/* HEADER --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.header-bar {
+    width: 99vw;
+    height: 12vh;
+    background-color: #351200;
+    z-index: 1;
+    border: 1px solid hsl(24, 100%, 9%);
+    top: 0;
+}
+
+
+/* CÍRCULO DA LOGO ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+.circle { 
+    width: 10vw;
+    height: 10vw;
+    background-color: #fa9664;
+    border: 1px solid hsl(24, 100%, 9%);
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5vh;
+    left: 2vw;
+}
+
+
+/* LOGO ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.circle img {
+    width: 80%;
+    height: 80%;
+    margin-top: 1.5rem;
+    margin-left: 1.25rem;
+}
+
+
+/* MENU ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.menu {
+    position: absolute;
+    top: 4vh;
+    right: 7vw;
+}
+
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 7vw;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #f9e0cc;
+    padding: 6px 12px;
+    font-size: 20px;
+}
+
+
+/* TEXTO PRINCIPAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.content {
+    padding: 3rem;
+    margin-top: 3%; 
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.btnIniciar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+    height: 10dvb;
+    border-radius: 5px;
+    background-color: #351200;
+    color: #f9e0cc;
+    font-family: "Poppins";
+    margin-left: 350px;
+}
+
+
+.btnIniciar p {
+    font-size: 19px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(249, 224, 204, 0.95);
+    border-radius: 2rem;
+    width: 60%;
+    height: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.caixa1 {
+    font-size: 1.5rem;
+    color:#351200;
+    margin-left: 60px;
+    margin-right: auto;
+}
+
+
+.caixa2 {
+    margin-left: 3px;
+    font-size: 1.5rem;
+    padding: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#jogo {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+
+.border-primary {
+    border: 3px solid #551c00;
+    border-radius: 5px;
+    width: 300px;
+}
+
+
+#pontuacaoDuranteJogo {
+    font-size: 1.5rem;
+    padding: 3rem;
+    color: #351200;
+}
+
+
+.mensagem_final_quiz {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    margin-left: 40px;
+}
+
+/* FOOTER ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.footer {
+    border: 1px solid hsl(24, 100%, 9%);
+    background-color: #351200;
+    color: #f9e0cc;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    min-height: 15vh;
+    height: 100%;
+}
+
+
+.contato {
+    width: 50%;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+
+
+.email {
+    width: 700px;
+    display: flex;
+    margin-left: 2rem;
+    align-items: center;
+}
+
+
+.telefone {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+
+.icone_email {
+    padding: 2%;
+    width: 9%;
+    height: 4%;
+}
+
+
+.icone_whatsapp {
+    padding: 2%;
+    width: 9%;
+    height: 4%;
+}
+
+#btnSubmeter {
+    width: 8vw;
+    padding: 1vh;
+    font-size: 1rem;
+    background-color: rgba(249, 224, 204, 0.95);
+}
+
+#btnSubmeter:hover {
+    cursor: pointer;
+    background-color: rgba(158, 127, 101, 0.95);
+    color: #FFFFFF
+}
+
+#btnProx {
+    width: 8vw;
+    padding: 1vh;
+    font-size: 1rem;
+    background-color: rgba(249, 224, 204, 0.95);
+}
+
+#btnProx:hover {
+    cursor: pointer;
+    background-color: rgba(158, 127, 101, 0.95);
+    color: #FFFFFF
+}
+
+#botoes {
+    display: flex;
+    height: 8vh;
+    flex-direction: column;
+    justify-content: space-between;
+}

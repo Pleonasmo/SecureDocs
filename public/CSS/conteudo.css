@@ -1,0 +1,233 @@
+/* PÁGINA COM A ESTILIZAÇÃO DO CONTEUDO.HTML */
+
+/* REMOVE MARGENS ACIMA DO HEADER ----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ESTILO GERAL DA PÁGINA ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+body {
+    background-image: url('../IMAGENS/estante_de_livros.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+}
+
+
+/* HEADER --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.header-bar {
+    width: 99vw;
+    height: 12vh;
+    background-color: #351200;
+    z-index: 1;
+    border: 1px solid hwb(23 0% 82%);
+}
+
+
+/* CÍRCULO DA LOGO ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+.circle { 
+    width: 10vw;
+    height: 10vw;
+    background-color: #fa9664;
+    border: 1px solid hsl(24, 100%, 9%);
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5vh;
+    left: 2vw;
+}
+
+
+/* LOGO ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.circle img {
+    width: 80%;
+    height: 80%;
+    margin-top: 1.5rem;
+    margin-left: 1.25rem;
+}
+
+
+/* MENU ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.menu {
+    position: absolute;
+    top: 4vh;
+    right: 7vw;
+}
+
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 7vw;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #f9e0cc;
+    padding: 6px 12px;
+    font-size: 20px;
+}
+
+
+/* TEXTO PRINCIPAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.content {
+    padding: 4rem;
+    margin-top: 3%;
+}
+
+
+.content h1 {
+    padding: 2%;
+    font-size: 2rem;
+    color:#551c00;
+    margin-top: 1%;
+    border: #551c00;
+    margin-left: 0.7%;
+    margin-bottom: 1%;
+}
+
+.caixa {
+    background-color: rgba(249, 224, 204, 0.95);
+    border-radius: 2rem;
+    width: 90%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+#caixa1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa img {
+    width: 50%;
+    height: fit-content;
+    border-radius: 2%;
+    margin-left: 1%;
+    border: #551c00;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content p {
+    margin-top: 0rem;
+    font-size: 1vw;
+    line-height: 1.5;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+
+.content p2 {
+    font-size: 2rem;
+    font-weight: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #551c00;
+}
+
+
+.linha_tempo {
+    width: 70%;
+}
+
+
+#texto_depois_do_conteudo {
+    font-size: 2rem;
+    color:#551c00;
+    border: #551c00;
+    margin-left: 0.7%;
+    margin-bottom: 1%;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* FOOTER ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.footer {
+    border: 1px solid hsl(24, 100%, 9%);
+    background-color: #351200;
+    color: #f9e0cc;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    min-height: 15vh;
+    height: 100%;
+}
+
+
+.contato {
+    width: 50%;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+
+
+.email {
+    width: 700px;
+    display: flex;
+    margin-left: 2rem;
+    align-items: center;
+}
+
+
+.telefone {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+
+.icone_email {
+    padding: 2%;
+    width: 9%;
+    height: 4%;
+}
+
+
+.icone_whatsapp {
+    padding: 2%;
+    width: 9%;
+    height: 4%;
+}

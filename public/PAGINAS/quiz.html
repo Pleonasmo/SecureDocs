@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="../CSS/quiz.css"/>
+
+    <link rel="icon" type="image/png" href="../IMAGENS/logoSemFundo.png">
+
+    <script src="../SCRIPTS/quizz.js"></script>
+
+
+</head>
+
+<body onload="onloadEsconder()">
+
+
+<!-- HEADER ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <div class="header-bar"></div>
+
+    <div class="circle">
+
+        <img src="../IMAGENS/logoSemFundo.png" title="Criado pelo Entusiastas da História">
+
+    </div>
+
+    <nav class="menu">
+
+        <ul>
+
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="./conteudo.html">Conteúdo</a></li>
+
+            <li><a href="./login.html">Login</a></li>
+
+        </ul>
+
+    </nav>
+
+
+<!-- TEXTO PRINCIPAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <main class="content"></main>
+
+        <div class="caixa">
+
+            <div id="pontuacaoEJogo">
+
+                <div class="botaoIniciar"> <button id="btnIniciarQuiz" class="btnIniciar" onclick="iniciarQuiz()"><p>Começar o Quiz</p></button> </div>
+
+            </div>
+
+            <div class="caixa1">
+
+                <div id="jogo">
+
+                    <div id="infoQuestao"> <p>Questão: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>.</p><br> </div>
+
+                    <div id="perguntaDaQuestaoAtual"><b><span id="spanQuestaoExibida"></span><br><br></b>  </div>
+
+                    <div id="opcoes">
+                        
+                        <span>
+                        
+                            <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
+                        
+                            <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label><br><br>
+                        
+                        </span>
+                        
+                        <span>
+                        
+                            <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
+                        
+                            <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label><br><br>
+                        
+                        </span>
+                        
+                        <span>
+                        
+                            <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
+                        
+                            <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label><br><br>
+                        
+                        </span>
+                        
+                        <span>
+                        
+                            <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                        
+                            <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label><br><br>
+                        
+                        </span>
+                        
+                    </div>
+
+                    <div id="botoes">
+
+                        <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button><br>
+                        
+                        <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</button><br>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="caixa2">
+
+                <div id="pontuacao" class="border-primary">
+
+                    <div id="pontuacaoDuranteJogo">
+
+                        <p><b>Quantidade de acertos:</b> <span id="spanCertas"></span></p><br>
+
+                        <p><b>Quantidade de erros:</b> <span id="spanErradas"></span></p><br>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="caixa3">
+
+                
+
+            </div>
+
+    </div>
+
+    </main>
+
+
+<!-- FOOTER ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer class="footer">
+
+        <div class="contato">Deseja nos contatar?</div>
+
+        <div class="email"><img class="icone_email" src="../IMAGENS/icone_email.png" title="Logo do Email">Email: entusiastasdahistoria@gmail.com</div>
+
+        <div class="telefone"><img class="icone_whatsapp" src="../IMAGENS/icone_whatsapp.png" title="Logo do Whatsapp">Telefone: +55 11 96630-2506</div>
+
+    </footer>
+
+</body>
+
+</html>

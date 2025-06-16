@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../CSS/dashboard.css"/>
+
+    <link rel="icon" type="image/png" href="../IMAGENS/logoSemFundo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+
+<body onload="carregarDados()">
+
+
+<!-- HEADER -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <div class="header-bar"></div>
+
+    <div class="circle">
+
+        <img src="../IMAGENS/logoSemFundo.png" title="Criado pelo Entusiastas da História">
+
+    </div>
+
+    <nav class="menu">
+
+        <ul>
+
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="./conteudo.html">Conteúdo</a></li>
+
+            <li><a href="./login.html">Login</a></li>
+
+            <li><a href="./quiz.html">Quiz</a></li>
+
+            <li><a href="./dashboard.html">Dashboard</a></li>
+
+        </ul>
+
+    </nav>
+
+
+<!-- TEXTO PRINCIPAL ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!-- PRIMEIRO GRÁFICO ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <main class="content">
+
+        <div class="caixa1">
+
+            <h2>Gráfico de acertos e erros dos usuários em cada questão:</h2><br>
+
+            <div style="width: 50vw;"> <canvas id="myChart1"></canvas> </div>
+        </div>
+
+
+<!-- SEGUNDO GRÁFICO ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+        <div id="caixaLateral">
+
+            <div class="caixa2">
+
+                <h2>Ranking de períodos favoritos:</h2>
+
+                <div style="width: 25vw; height: 30vh;"> <canvas id="myChart2"></canvas> </div>
+
+            </div>
+
+
+<!-- ÁREA DAS KPI'S ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+        <div class="caixa3">
+
+            <div id="kpis">
+
+                <div class="kpi">
+
+                    <span class="titulo-kpi">Usuários do site</span>
+
+                    <span class="valor-kpi" id="kpi1">...</span>
+
+                </div>
+
+                <div class="kpi">
+
+                    <span class="titulo-kpi">Taxa de acertos</span>
+
+                    <span class="valor-kpi" id="kpi2">...</span>
+
+                </div>
+
+                <div class="kpi">
+
+                    <span class="titulo-kpi">Taxa de erros</span>
+
+                    <span class="valor-kpi" id="kpi3">...</span>
+
+                </div>
+
+                <div class="kpi">
+
+                    <span class="titulo-kpi">Respostas do quiz</span>
+
+                    <span class="valor-kpi" id="kpi4">...</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+<!-- FOOTER ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer class="footer">
+
+        <div class="contato">Deseja nos contatar?</div>
+
+        <div class="email"><img class="icone_email" src="../IMAGENS/icone_email.png" title="Logo do Email">Email: entusiastasdahistoria@gmail.com</div>
+
+        <div class="telefone"><img class="icone_whatsapp" src="../IMAGENS/icone_whatsapp.png" title="Logo do Whatsapp">Telefone: +55 11 96630-2506</div>
+
+    </footer>
+
+</body>
+
+</html>
+
+<script src="..\SCRIPTS\dashboard.js"></script>

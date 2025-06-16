@@ -1,0 +1,239 @@
+/* PÁGINA COM A ESTILIZAÇÃO DO INDEX.HTML */
+
+/* REMOVE MARGENS ACIMA DO HEADER ----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ESTILO GERAL DA PÁGINA ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    background-image: url('../IMAGENS/estante_de_livros.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+}
+
+
+/* HEADER --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.header-bar {
+    width: 99vw;
+    height: 12vh;
+    background-color: #351200;
+    z-index: 1;
+    border: 1px solid hsl(24, 100%, 9%);
+}
+
+
+/* CÍRCULO DA LOGO ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+.circle { 
+    width: 13vw;
+    height: 13vw;
+    background-color: #fa9664;
+    border: 1px solid hsl(32, 100%, 11%);
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5vh;
+    left: 2vw;
+}
+
+
+/* LOGO ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.circle img {
+    width: 80%;
+    height: 80%;
+    margin-top: 1.83rem;
+    margin-left: 1.6rem;
+}
+
+
+/* MENU ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.menu {
+    position: absolute;
+    top: 4vh;
+    right: 7vw;
+}
+
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 7vw;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #f9e0cc;
+    padding: 6px 12px;
+    font-size: 20px;
+}
+
+
+/* TEXTO PRINCIPAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.content {
+    padding: 4rem;
+    margin-top: 3%;
+}
+
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color:#551c00;
+    margin-top: 3%;
+    border: #551c00;
+}
+
+
+.content h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    color: #551c00;
+}
+
+
+.content p {
+    margin-top: 2rem;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+
+.content ol {
+    margin-top: 2rem;
+    padding-left: 3rem;         
+    line-height: 3;
+    font-size: 1vw;
+}
+
+
+.boaSorte {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color:#551c00;
+}
+
+
+.caixa {
+    background-color: rgba(249, 224, 204, 0.95);
+    padding: 3rem;
+    border-radius: 2rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+
+/* FOOTER ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.footer {
+    border: 1px solid hsl(24, 100%, 9%);
+    background-color: #351200;
+    color: #f9e0cc;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    min-height: 15vh;
+    height: 100%;
+}
+
+
+.contato {
+    width: 50%;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+
+
+.email {
+    width: 700px;
+    display: flex;
+    margin-left: 2rem;
+    align-items: center;
+}
+
+
+.telefone {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+
+.icone_email {
+    padding: 2%;
+    width: 9%;
+    height: 4%;
+}
+
+
+.icone_whatsapp {
+    padding: 2%;
+    width: 9%;
+    height: 4%;
+}
+
+
+/* IMAGEM ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.text-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 0rem;
+    margin-right: 5rem;
+}
+
+
+.text-section {
+    flex: 1 1 70%;
+}
+
+
+.image-section {
+    flex: 1 10%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.image-section img {
+    width: 70%;
+    height: auto;
+    border-radius: 2%;
+    display: flex;
+}

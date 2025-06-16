@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Cadastro</title>
+    
+    <link rel="stylesheet" href="../CSS/cadastro.css"/>
+
+    <link rel="icon" type="image/png" href="../IMAGENS/logoSemFundo.png">
+    
+    <script src="../SCRIPTS/cadastro.js"></script>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <div class="header-bar"></div>
+
+    <div class="circle">
+ 
+        <img src="../IMAGENS/logoSemFundo.png" title="Criado pelo Entusiastas da História">
+ 
+    </div>
+
+    <nav class="menu">
+
+        <ul>
+        
+            <li><a href="../index.html">Home</a></li>
+        
+            <li><a href="./conteudo.html">Conteúdo</a></li>
+        
+            <li><a href="./login.html"><u>Login</u></a></li>
+                
+        </ul>
+    
+    </nav>
+
+
+<!-- TEXTO PRINCIPAL ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <main class="content">
+ 
+        <div class="caixa">
+
+            <p1>Para criar sua conta: preencha os campos abaixo e clique no botão!</p1><br><br>
+
+            <p2><b>Nome Completo:  <input type="text" id="nome_usuario_cadastro" autocomplete="off"></b></p2><br><br>
+
+            <p2><b>Apelido:  <input type="text" id="nome_apelido_cadastro" autocomplete="off"></b></p2><br><br>
+
+            <p2><b>Telefone:  <input type="text" id="telefone_usuario_cadastro" autocomplete="off"></b></p2><br><br>
+        
+            <p2><b>Email:  <input type="text" id="ipt_email_cadastro" autocomplete="off"></b></p2><br><br>
+
+            <p2><b>Senha:  <input type="password" id="ipt_senha_cadastro" autocomplete="off"></b></p2><br><br>
+
+            <p2><b>Confirmar sua senha:  <input type="password" id="ipt_confirmacao_senha_cadastro" autocomplete="off"></b></p2><br><br>
+            
+            <p2><b>Selecione o seu periodo histórico preferido:
+                <select id="select_periodo">
+                    <option value="Pré-História">Pré-História</option>
+                    <option value="Idade Antiga">Idade Antiga</option>
+                    <option value="Idade Média">Idade Média</option>
+                    <option value="Idade Moderna">Idade Moderna</option>
+                    <option value="Idade Contemporânea">Idade Contemporânea</option>
+                </select>
+            </b></p2><br><br>
+
+            <button onclick="criar_minha_conta()">Criar minha conta</button>
+
+            <p3>Depois disso, volte para a página de login e preencha os campos com os dados usados acima</p3>
+
+        </div>
+
+    </main>
+
+
+<!-- FOOTER -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer class="footer">
+ 
+        <div class="contato">Deseja nos contatar?</div>
+ 
+        <div class="email"><img class="icone_email" src="../IMAGENS/icone_email.png" title="Logo do Email">Email: entusiastasdahistoria@gmail.com</div>
+ 
+        <div class="telefone"><img class="icone_whatsapp" src="../IMAGENS/icone_whatsapp.png" title="Logo do Whatsapp">Telefone: +55 11 96630-2506</div>
+ 
+    </footer>
+
+</body>
+
+</html>

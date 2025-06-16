@@ -10,7 +10,7 @@ use SecureDocs;
 create table Empresa ( id int primary key auto_increment,
                        razao_social varchar(50),
 	                   cnpj char(14),
-					   codigo_ativacao varchar(50) );
+					   codigo_ativacao varchar(50) unique);
 
 
 create table Usuario ( id int primary key auto_increment,
@@ -19,9 +19,7 @@ create table Usuario ( id int primary key auto_increment,
 					   telefone char(13),
 					   email varchar(60) unique,
 					   senha varchar(80),
-					   codigo_empresa varchar(50),
-                       fk_Empresa int,
-	                   foreign key (fk_Empresa) references Empresa(id) );
+					   codigo_empresa varchar(50));
 
 
 create table Sala ( id int primary key auto_increment,

@@ -6,7 +6,7 @@ function cadastrar(req, res) {
     var telefone = req.body.telefoneServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var periodo = req.body.periodoServer;
+    var codigo = req.body.codigoServer;
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
@@ -20,7 +20,7 @@ function cadastrar(req, res) {
         res.status(400).send("Seu telefone está undefined");
     } else {
 
-        usuarioModel.cadastrar(nome, apelido, telefone, email, senha, periodo)
+        usuarioModel.cadastrar(codigo, nome, apelido, telefone, email, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

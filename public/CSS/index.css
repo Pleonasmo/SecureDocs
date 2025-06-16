@@ -11,7 +11,7 @@
         }
         
         body {
-            background: linear-gradient(to bottom, #1e3e0f, #315421, #3e6d2b);
+           
             color: white;
             overflow-x: hidden;
         }
@@ -22,7 +22,7 @@
             top: 0;
             width: 100%;
             height: 80px;
-            background-color: rgba(49, 84, 33, 0.95);
+            background-color: #2e465a;
             backdrop-filter: blur(5px);
             padding: 0 5%;
             z-index: 1000;
@@ -34,7 +34,7 @@
         
         .logo img {
             max-height: 180px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 2px 4px rgba(255, 251, 251, 0.5));
             
         }
         
@@ -53,7 +53,7 @@
         }
         
         .menu a:hover {
-            background-color: #3e6d2b;
+            background-color: #b6570f;
             color: white;
             transform: translateY(-2px);
         }
@@ -74,7 +74,7 @@
         /*  HOME */
         #home {
             text-align: center;
-            background-image: url('../IMAGENS/estante_de_livros.png');
+            background-image: url('https://media.istockphoto.com/id/468856268/pt/foto/sala-de-armazenamento.jpg?s=612x612&w=0&k=20&c=FgHhMbptiRcALpMk1T8uA2ZNarLXRDabu2cYPnRjVxw=');
             background-size: cover;
             background-position: center;
         }
@@ -84,6 +84,7 @@
             margin-bottom: 25px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.8);
             line-height: 1.2;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
         }
         
         #home p {
@@ -93,11 +94,16 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
         }
         
+        #home .texto{
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+            
+        }
         .btn {
             display: inline-block;
-            background-color: #315421;
+            background-color: #2e465a;
             color: #d0d0d0;
             padding: 15px 40px;
             border-radius: 36px;
@@ -110,7 +116,7 @@
         }
         
         .btn:hover {
-            background-color: #3e6d2b;
+            background-color: #599bb6;
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0,0,0,0.4);
         }
@@ -120,10 +126,13 @@
             display: flex;
             align-items: center;
             gap: 50px;
-            max-width: 1000px;
+            max-width: 2000px;
             margin: 0 auto;
+            
         }
-        
+        #funciona{
+            background-color:#253949;
+        }
         #funciona .imagem {
             flex: 1;
             border-radius: 20px;
@@ -132,7 +141,7 @@
         }
         
         #funciona .imagem img {
-            width: 100%;
+            width: 150%;
             height: auto;
             display: block;
             transition: transform 0.5s;
@@ -157,14 +166,14 @@
             margin-bottom: 20px;
         }
         
-        .cor {
-            color: #7ed957;
+        .texto .cor {
+            color: #be5402;
             font-weight: bold;
         }
         
         /* SOLUÇÕES */
         #solucoes {
-            background-color: rgba(0, 0, 0, 0.15);
+            background-color: #2e465a
         }
         
         #solucoes .structure {
@@ -181,7 +190,7 @@
         
         #solucoes h2 {
             font-size: 2.5rem;
-            color: #3ea60e;
+            color: #be5402;
             margin-bottom: 25px;
         }
         
@@ -189,6 +198,7 @@
             font-size: 1.2rem;
             line-height: 1.7;
             margin-bottom: 25px;
+            
         }
         
         #solucoes .mainimagem {
@@ -212,7 +222,7 @@
         
         .structure2 h3 {
             font-size: 2rem;
-            color: #3ea60e;
+            color:#be5402;
             margin-bottom: 50px;
         }
         
@@ -224,7 +234,7 @@
         }
         
         .card {
-            background-color: #55893d;
+            background-color: #bb611c;
             border-radius: 22px;
             padding: 35px 25px;
             width: 280px;
@@ -250,7 +260,7 @@
         }
         
         .saibamais {
-            color: #3ea60e;
+            color: #be5402;
             font-weight: bold;
             text-decoration: none;
             display: inline-block;
@@ -258,13 +268,11 @@
             transition: all 0.3s;
         }
         
-        .saibamais:hover {
-            color: #7ed957;
-        }
+      
         
         /* SEÇÃO SOBRE NÓS */
         #sobre {
-            background: linear-gradient(to bottom, #1e3e0f, #315421);
+            background-color: #3b5266;
         }
         
         #sobre .structure {
@@ -289,7 +297,7 @@
         }
         
         #sobre span {
-            color: #90ee33;
+            color: #be5402;
             font-weight: bold;
         }
         
@@ -317,148 +325,23 @@
         
         .imagem1 {
             background-color: #3e6d2b;
-            background-image: url('./Assets/sobre1.webp');
+            background-image: url('https://4infra.com.br/wp-content/uploads/2023/10/destaque-blog-1024x576.jpg');
         }
         
         .imagem2 {
             background-color: #4a7f34;
-            background-image: url('./Assets/sobre2.png');
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-4EZVrGLsZ-9Ev_g41l5OVuFyqCwSeYq3uA&s');
         }
         
         .imagem3 {
             background-color: #558f3d;
-            background-image: url('./Assets/sobre3.webp');
+            background-image: url('https://www.pontotel.com.br/local/wp-content/uploads/2022/10/gestao-eletronica-de-documentos.webp');
         }
         
-        /* SEÇÃO SIMULAÇÃO */
-        #simulacao {
-            background-color: white;
-            color: #333;
-        }
-        
-        #simulacao .simulador {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        #simulacao h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-        
-        .destaque {
-            color: black;
-        }
-        
-        .cor {
-            color: #669c31;
-        }
-        
-        .textol {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .verde {
-            color: #669c31;
-        }
-        
-        .fonte {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 40px;
-        }
-        
-        .texto2 {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 50px;
-        }
-        
-        .texto2 span {
-            color: #669c31;
-        }
-        
-        .inputs {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            text-align: left;
-        }
-        
-        .linha {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .campos {
-            flex: 1;
-            min-width: 280px;
-        }
-        
-        .campos label {
-            display: block;
-            font-size: 1rem;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: bold;
-        }
-        
-        .campos input {
-            width: 100%;
-            padding: 14px 20px;
-            border: none;
-            border-radius: 30px;
-            background-color: rgba(103, 156, 49, 0.2);
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-        
-        .campos input:focus {
-            outline: none;
-            background-color: rgba(103, 156, 49, 0.3);
-            box-shadow: 0 0 0 2px #669c31;
-        }
-        
-        .botao {
-            margin-top: 30px;
-        }
-        
-        .botao button {
-            padding: 15px 40px;
-            background-color: #315421;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-        
-        .botao button:hover {
-            background-color: #3e6d2b;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        }
-        
-        .result {
-            margin-top: 50px;
-            min-height: 100px;
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 15px;
-            font-size: 1.2rem;
-        }
         
         /* SEÇÃO CONTATO */
         #contato {
-            background: linear-gradient(to bottom, #315421, #1e3e0f);
+           background-color: #2e465a;
         }
         
         .container {
@@ -528,7 +411,7 @@
             padding: 15px 40px;
             border: none;
             border-radius: 36px;
-            background-color: #69bc3b;
+            background-color: #be5402;
             color: white;
             font-size: 1.1rem;
             cursor: pointer;
@@ -537,7 +420,7 @@
         }
         
         .ladodireito button:hover {
-            background-color: #5aa733;
+            background-color: #e48124;
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
@@ -549,4 +432,6 @@
             animation: fadeIn 0.8s ease-out forwards;
         }
         
-        
+        #contato .container{
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }

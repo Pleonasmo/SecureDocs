@@ -16,7 +16,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 body {
-    background-image: url('../IMAGENS/estante_de_livros.png');
+    background-image: url('https://media.istockphoto.com/id/468856268/pt/foto/sala-de-armazenamento.jpg?s=612x612&w=0&k=20&c=FgHhMbptiRcALpMk1T8uA2ZNarLXRDabu2cYPnRjVxw=');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,69 +25,47 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-
-/* HEADER --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-
-.header-bar {
-    width: 99vw;
-    height: 12vh;
-    background-color: #351200;
-    z-index: 1;
-    border: 3px solid hsl(24, 100%, 9%);
+   /* HEADER */
+   header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #2e465a;
+    backdrop-filter: blur(5px);
+    padding: 0 5%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 
-
-/* CÍRCULO DA LOGO ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-
-
-.circle {
-    width: 13vw;
-    height: 13vw;
-    background-color: #fa9664;
-    border: 1px solid hsl(24, 100%, 9%);
-    border-radius: 50%;
-    position: absolute;
-    top: 1.5vh;
-    left: 2vw;
+.logo img {
+    max-height: 180px;
+    filter: drop-shadow(0 2px 4px rgba(255, 251, 251, 0.5));
+    
 }
-
-
-/* LOGO ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-
-.circle img {
-    width: 80%;
-    height: 80%;
-    margin-top: 1.83rem;
-    margin-left: 1.6rem;
-}
-
-
-/* MENU ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
 
 .menu {
-    position: absolute;
-    top: 4vh;
-    right: 7vw;
-}
-
-
-.menu ul {
-    list-style: none;
     display: flex;
-    gap: 7vw;
+    gap: 20px;
 }
-
 
 .menu a {
     text-decoration: none;
-    color: #f9e0cc;
-    padding: 6px 12px;
-    font-size: 20px;
+    color: rgb(220, 220, 220);
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
 }
 
+.menu a:hover {
+    background-color: #b6570f;
+    color: white;
+    transform: translateY(-2px);
+}
 
 /* TEXTO PRINCIPAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -103,12 +81,12 @@ body {
     font-size: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: #551c00;
+    color: #ffffff;
 }
 
 
 .content p2 {
-    color: #551c00;
+    color: #ffffff;
     text-align: center;
     font-size: 1.6rem;
 }
@@ -116,7 +94,7 @@ body {
 
 .content p3 {
     font-size: 1.5rem;
-    color: #551c00;
+    color: #ffffff;
 }
 
 
@@ -125,17 +103,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(249, 224, 204, 0.95);
+    background-color: #3d5f7a;
     padding: 3rem;
     border-radius: 2rem;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+   
 }
 
 .caixa button {
-    background-color: #c35930;
+    background-color: #ff6d33;
     padding: 2.5%;
     align-items: center;
     justify-content: space-between;
@@ -147,6 +126,9 @@ body {
     font-size: 1.5rem;
     text-align: center;
     display: flex;
+    border-radius: 15px;
+    border: none;
+    color: #ffffff;
 }
 
 
@@ -165,7 +147,7 @@ body {
 
 
 .cadastrar a {
-    color: black;
+    color: rgb(255, 255, 255);
     list-style: none;
     font-size: 1.5rem;
 }
@@ -176,6 +158,7 @@ body {
     height: 2.8rem;
     font-size: 1.2rem;
     padding: 2%;
+    margin-bottom: 1rem;
 }
 
 
@@ -183,8 +166,8 @@ body {
 
 
 .footer {
-    border: 1px solid hsl(24, 100%, 9%);
-    background-color: #351200;
+    
+    background-color: #b83d00;
     color: #f9e0cc;
     font-size: 1.5rem;
     display: flex;
@@ -192,8 +175,8 @@ body {
     align-items: center;
     padding: 2rem;
     margin-top: 2rem;
-    min-height: 15vh;
-    height: 100%;
+    min-height: 3vh;
+    height: 80%;
 }
 
 
@@ -243,4 +226,9 @@ body {
 
 #select_periodo:hover {
     cursor: pointer;
+}
+
+input{
+    border-radius: 15px;
+    border: none;
 }

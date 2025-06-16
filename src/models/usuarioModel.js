@@ -7,9 +7,9 @@
 
 // essa função está inserindo os dados de cadastro no meu banco de dados:
 
-    function cadastrar(nome, email, apelido, telefone, senha, periodo) {
+    function cadastrar(codigo, nome, email, apelido, telefone, senha) {
     
-        var instrucaoSql = `INSERT INTO Usuario (nome, apelido, telefone, email, senha, periodo) VALUES ('${nome}', '${email}', '${apelido}', '${telefone}', '${senha}', '${periodo}');`;
+        var instrucaoSql = `INSERT INTO Usuario (nome, apelido, telefone, email, senha, codigo_empresa) VALUES ('${nome}', '${email}', '${apelido}', '${telefone}', '${senha}', '${codigo}');`;
         
         console.log("Executando a instrução SQL: \n" + instrucaoSql);
     

@@ -1,5 +1,7 @@
 function criar_minha_conta() {
 
+    var codigo = ipt_codigo_ativacao.value;
+
     var nome = nome_usuario_cadastro.value;
   
     var apelido = nome_apelido_cadastro.value;
@@ -12,7 +14,7 @@ function criar_minha_conta() {
   
     var confirmaSenha = ipt_confirmacao_senha_cadastro.value;
 
-    var periodo = select_periodo.value;
+    
 
 
     if (nome == "" || email == "" || apelido == "" || confirmaSenha == "" || senha == "" || telefone == "") {
@@ -59,7 +61,7 @@ function criar_minha_conta() {
   
         senhaServer: senha,
 
-        periodoServer: periodo
+        codigoServer: codigo
   
       }),
   

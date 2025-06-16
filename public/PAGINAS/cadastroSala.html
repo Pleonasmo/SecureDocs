@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Salas</title>
+    <title>SecureDocs</title>
+    <link rel="stylesheet" href="../CSS/cadastro.css">
+    <link rel="icon" href="../IMAGENS/Logo_para_empresa_de_ar_condicionado-removebg-preview.png">
     <script src="../SCRIPTS/cadastro.js"></script>
 </head>
+
 <body>
-    <h1>Bem vindo ao cadastro de Salas</h1>
-    <form action="POST">
-        Sala: <input type="sala"> <br>
-        Tamanho: <input type="tamanho"> <br>
-    </form>    
+    <!-- Menu de Navegação -->
+    <header>
+        <div class="logo">
+            <img src="../IMAGENS/Logo_para_empresa_de_ar_condicionado-removebg-preview.png">
+        </div>
+        <div class="menu">
+            <a href="../index.html">Início</a>
+            
+        </div>
+    </header>
+
+
+<!-- TEXTO PRINCIPAL ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <main class="content">
+ 
+        <div class="caixa">
+            <p1>Para criar sua conta: preencha os campos abaixo e clique no botão!</p1><br><br>
+            <p2><b>Sala:  <input type="text" id="ipt_codigo_ativacao" autocomplete="off"></b></p2><br><br>
+
+            <p2><b>Tamanho:  <input type="text" id="nome_usuario_cadastro" autocomplete="off"></b></p2><br><br>
+            <button onclick="cadastrarSala()">Cadastrar sala</button>
+            <p3>Depois disso, volte para a página de dashboard</p3>
+
+        </div>
+
+    </main>
+
+
+<!-- FOOTER -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer class="footer">
+ 
+        <div class="contato">Deseja nos contatar?</div>
+ 
+        <div class="email"><img class="icone_email" src="../IMAGENS/icone_email.png" title="Logo do Email">Email: securedocs@securedocs.com</div>
+ 
+        <div class="telefone"><img class="icone_whatsapp" src="../IMAGENS/icone_whatsapp.png" title="Logo do Whatsapp">Telefone: +55 11 94002-8922</div>
+ 
+    </footer>
+
 </body>
+
 </html>

@@ -2,16 +2,16 @@ var usuarioModel = require("../models/SalaModel");
 
 function cadastrarSala(req, res) {
     var nome = req.body.nomeServer;
-    var telefone = req.body.telefoneServer;
+    var tamanho = req.body.tamanhoServer;
     
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
-    } else if (telefone == undefined) {
+    } else if (tamanho == undefined) {
         res.status(400).send("Seu telefone está undefined");
     } else {
 
-        SalaModel.cadastrarSala(nome,telefone)
+        SalaModel.cadastrarSala(nome,tamanho)
             .then(
                 function (resultado) {
                     res.json(resultado);
